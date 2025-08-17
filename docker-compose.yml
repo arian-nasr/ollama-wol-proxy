@@ -1,0 +1,12 @@
+services:
+  ollama-wol-proxy:
+    build: .
+    container_name: ollama-wol-proxy
+    env_file:
+      - .env
+    network_mode: host
+    ports:
+      - "${BIND_ADDRESS}:5000:5000"
+    volumes:
+      - ./config/servers.yml:/app/config/servers.yml:ro
+    restart: unless-stopped

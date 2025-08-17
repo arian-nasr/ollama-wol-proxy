@@ -1,0 +1,3 @@
+servers:
+  - mac: "aa:bb:cc:dd:ee:ff"
+    ip: "1.1.1.1"
